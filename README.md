@@ -45,3 +45,7 @@ The project revolves around the ADAU1761 codec, present on the development board
 ### Block design
 
 <img src="README.assets/image-20210505114200626.png" alt="image-20210505114200626" style="zoom:50%;" />
+
+
+### How to install 
+Just open Vivado, go to Tools -> Run Tcl Script... and choose "audio-project.tcl". Everything is automatic.
