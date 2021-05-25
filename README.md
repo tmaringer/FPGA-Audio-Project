@@ -4,11 +4,11 @@
 
 Legend : :hammer: ​Under development  :heavy_check_mark: Done​
 
-* **V4** Audio effects by AXIS pipelining :hammer:
+* **V4** Audio effects with AXIS pipelining :heavy_check_mark:
   * Gain (0 -> 20dB) :heavy_check_mark:
   * Saturation (double saturation) :heavy_check_mark:
   * Rectification (half-wave or full-wave) :heavy_check_mark:
-  * FIR :hammer:
+  * FIR (up to 1024 taps using 4 parallel MAC) :heavy_check_mark:
   * Echo (up to 1.5 seconds) :heavy_check_mark:
   * Configuration by APB over Python Pynq library
 * **V3** I2S communication 	:heavy_check_mark:
