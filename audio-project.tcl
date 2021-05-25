@@ -1,7 +1,7 @@
 #*****************************************************************************************
 # Vivado (TM) v2020.2 (64-bit)
 #
-# i2s_transceiver.tcl: Tcl script for re-creating project 'i2s_transceiver'
+# audio-project.tcl: Tcl script for re-creating project 'audio-project'
 #
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
 #
@@ -56,7 +56,7 @@ if { [info exists ::origin_dir_loc] } {
 }
 
 # Set the project name
-set _xil_proj_name_ "i2s_transceiver"
+set _xil_proj_name_ "audio-project"
 
 # Use project name variable, if specified in the tcl shell
 if { [info exists ::user_project_name] } {
@@ -64,7 +64,7 @@ if { [info exists ::user_project_name] } {
 }
 
 variable script_file
-set script_file "i2s_transceiver.tcl"
+set script_file "audio-project.tcl"
 
 # Help information for this script
 proc print_help {} {
@@ -398,34 +398,34 @@ set obj [get_filesets utils_1]
 
 # Adding sources referenced in BDs, if not already added
 if { [get_files axi_gain.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/axi_gain.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/axi_gain.vhd
 }
 if { [get_files axi_saturation.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/axi_saturation.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/axi_saturation.vhd
 }
 if { [get_files axi_rectification.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/axi_rectification.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/axi_rectification.vhd
 }
 if { [get_files axi_fir.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/axi_fir.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/axi_fir.vhd
 }
 if { [get_files flipflops.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/flipflops.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/flipflops.vhd
 }
 if { [get_files debounce.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/debounce.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/debounce.vhd
 }
 if { [get_files axi_echo.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/axi_echo.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/axi_echo.vhd
 }
 if { [get_files buffers.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/buffers.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/buffers.vhd
 }
 if { [get_files i2s_receiver.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/i2s_receiver.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/i2s_receiver.vhd
 }
 if { [get_files i2s_transmitter.vhd] == "" } {
-  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/i2s_transceiver/src/rtl/i2s_transmitter.vhd
+  import_files -quiet -fileset sources_1 C:/FPGA/Vivadoprojects/audio-project/src/rtl/i2s_transmitter.vhd
 }
 
 
@@ -1990,7 +1990,7 @@ if { $obj != "" } {
 }
 set obj [get_runs synth_1]
 set_property -name "needs_refresh" -value "1" -objects $obj
-set_property -name "auto_incremental_checkpoint.directory" -value "C:/home/thibaut/FPGA/Vivadoprojects/i2s_transceiver/i2s_transceiver.srcs/utils_1/imports/synth_1" -objects $obj
+set_property -name "auto_incremental_checkpoint.directory" -value "C:/home/thibaut/FPGA/Vivadoprojects/audio-project/audio-project.srcs/utils_1/imports/synth_1" -objects $obj
 set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
 
 # set the current synth run
@@ -2204,7 +2204,7 @@ set_property -name "options.warn_on_violation" -value "1" -objects $obj
 
 }
 set obj [get_runs impl_1]
-set_property -name "auto_incremental_checkpoint.directory" -value "C:/home/thibaut/FPGA/Vivadoprojects/i2s_transceiver/i2s_transceiver.srcs/utils_1/imports/impl_1" -objects $obj
+set_property -name "auto_incremental_checkpoint.directory" -value "C:/home/thibaut/FPGA/Vivadoprojects/audio-project/audio-project.srcs/utils_1/imports/impl_1" -objects $obj
 set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
 set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
 set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
